@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: tcllcms - Win32 Release--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOKUME~1\BEDNAR~1\LOKALE~1\Temp\RSP13D3.tmp" mit Inhalten
+[
+lcms115.lib tcl84.lib tk84.lib kernel32.lib shell32.lib user32.lib /nologo /dll /incremental:yes /pdb:"Release/tcllcms.pdb" /machine:I386 /out:"c:\programme\tcl\lib\tcllcms\tcllcms.dll" /implib:"Release/tcllcms.lib" /libpath:"..\..\tcl\tcl8.4.7\win\Release" /libpath:"..\..\lcms-1.15\Lib\MS" /libpath:"..\..\tcl\tk8.4.7\win\Release" 
+.\Release\tcllcms.obj
+.\Release\tcllcms_conversion.obj
+.\Release\tcllcms_gamma.obj
+.\Release\tcllcms_info.obj
+.\Release\tcllcms_misc.obj
+.\Release\tcllcms_profile.obj
+.\Release\tcllcms_trans.obj
+.\Release\tcllcms.res
+]
+Erstellen der Befehlzeile "link.exe @C:\DOKUME~1\BEDNAR~1\LOKALE~1\Temp\RSP13D3.tmp"
+<h3>Ausgabefenster</h3>
+Linker-Vorgang läuft...
+   Bibliothek Release/tcllcms.lib und Objekt Release/tcllcms.exp wird erstellt
+
+
+
+<h3>Ergebnisse</h3>
+tcllcms.dll - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>
