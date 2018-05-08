@@ -18,10 +18,13 @@ cmsOpenProfile returns a command-handle you should store for later reference. Fo
 
 This command is capable of deleteing itself and giving some useful information about the profile itself.
 
+```
 profilehandle delete
 profilehandle get option
+```
 
 where option is one of:
+
 productname, productinfo, manufacturer, model, pcs, colorspace, deviceclass, renderingintent,
 isintentsupported, mediawhitepoint, mediablackpoint, iluminant, colorants.
 
@@ -31,6 +34,7 @@ except for isintentsupported, which needs a renderingintent (0-3 see above) and 
 
 example:
 
+```
 set profile [cmsOpenProfile ./rota_22072003.icc]
 puts "This profiles name is: [$profile get productname]"
 puts "Its PCS is [$profile get pcs] and its colorspace is [$profile get colorspace]"
@@ -39,7 +43,7 @@ puts "The default rendering intent for this profile is\
 puts "now closing the profile..." 
 
 $profile delete
-
+```
 ___________________________________________________________________________________________________________
 
 cmsSaveProfile profilehandle filename
@@ -83,7 +87,7 @@ the corresponding profilehandles used to create the transform, whereas profiles 
 profiles so you can close them in one foreach :)
 
 example:
-
+```
 # opening the profiles
 set input_profile [cmsOpenProfile /home/lula/profiles/4C/rota_220703.icc]
 set output_profile [cmsOpenProfile *Lab]
@@ -97,7 +101,7 @@ puts "$transform was created out of [$transform get inputprofile] and [$transfor
 set profiles [$transform get profiles]
 $transform delete
 foreach profile $profiles {$profile delete}
-
+```
 Deleteing a transformation does not close the related profiles!
 
 ___________________________________________________________________________________________________________
@@ -125,7 +129,7 @@ set lab2cmyk [cmsCreateTransform $lab $cmyk 3]
 
 set lab [cmsDoTransform $cmyk2lab "30 30 30 0"]
 set cmyk [cmsDoTransform $lab2cmyk $lab]
-puts "Input was 30/30/30/0, transformed to Lab (D50/2°): $lab and returned to $cmyk (according to this profiles separation)"
+puts "Input was 30/30/30/0, transformed to Lab (D50/2Â°): $lab and returned to $cmyk (according to this profiles separation)"
 puts "that was a nice example!"
 
 ___________________________________________________________________________________________________________
